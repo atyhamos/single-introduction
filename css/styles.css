@@ -1,38 +1,49 @@
+html {
+  font-size: 0.9rem;
+}
+
 body,
 button {
   margin: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 21px;
+  font-size: 1.125rem;
 }
 
 img {
-  width: 60%;
+  max-width: 100%;
+}
+
+header img {
+  height: 300px;
   border-radius: 50%;
 }
 
 .container {
-  width: 570px;
+  width: 90%;
+  max-width: 570px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 6.25em 0;
 }
 
+/* Typography */
 h1 {
-  font-size: 60px;
+  font-size: 3.75rem;
   margin-top: 0;
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 2.625rem;
   margin-top: 0;
-  margin-bottom: 0;
   border-top: 1px #c4c4c4 solid;
   border-bottom: 1px #c4c4c4 solid;
-  padding: 10px 0;
+
+  padding: 0.5em 0;
+  margin-bottom: 0;
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin-bottom: 0;
 }
 
@@ -41,8 +52,8 @@ p {
 }
 
 .text-small {
-  font-size: 16px;
-  margin-top: 0;
+  font-size: 1rem;
+  margin-top: 0.3215em;
 }
 
 h1,
@@ -59,12 +70,12 @@ time {
 
 h1 .text-accent {
   display: block;
-  font-size: 80px;
+  font-size: 5rem;
 }
 
 h2 .text-accent {
   display: block;
-  font-size: 60px;
+  font-size: 3.75rem;
 }
 
 a {
@@ -94,8 +105,8 @@ a {
   text-decoration: none;
   background-color: #99d930;
   color: #252525;
-  padding: 10px 25px;
-  margin-top: 25px;
+  padding: 0.625em 1.5625em;
+  margin-top: 1.5625em;
 }
 
 button {
@@ -105,23 +116,25 @@ button {
 /* Styling modal */
 
 #modal {
-  background-color: #fff;
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1em;
   position: relative;
-  top: 60%;
-  width: 570px;
+  top: 50%;
   margin: 0 auto;
+}
+
+#modal a {
+  margin: 1em;
 }
 
 #overlay {
   display: none;
-  width: 100%;
   height: 100%;
-  position: absolute;
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -134,4 +147,88 @@ button {
 .contact-link:focus {
   color: #fff;
   background-color: #252525;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 1.3125rem;
+  }
+}
+
+@media (min-width: 750px) {
+  header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .splitter {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-me {
+    width: 50%;
+  }
+
+  .my-projects.inverse {
+    width: 50%;
+    background-color: #99d930;
+    color: #252525;
+  }
+
+  .my-projects span,
+  .my-projects time,
+  .my-projects a {
+    color: currentColor;
+  }
+
+  .my-projects a:hover,
+  .my-projects a:focus {
+    color: #fff;
+  }
+
+  .my-projects h2 {
+    border-color: currentColor;
+  }
+
+  .my-projects .btn {
+    background-color: #252525;
+    color: #fff;
+  }
+
+  .portfolio {
+    background: #252525;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .portfolio-block {
+    display: block;
+  }
+
+  .container-work {
+    max-width: 1200px;
+  }
+
+  .container-work h2 {
+    margin-bottom: 1em;
+  }
+
+  .work {
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .portfolio-item {
+    width: 28%;
+  }
+
+  .portfolio-item img {
+    height: 15em;
+    width: 100%;
+    object-fit: cover;
+  }
 }
